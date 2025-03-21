@@ -176,13 +176,6 @@
             const isPinching = e.ctrlKey
             if(isPinching) e.preventDefault()
         }, { passive: false })
-    </script>
-    <script src="utils.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
-
-<script>
     // 新增邮箱验证切换逻辑
     document.querySelectorAll('input[name="add-type"]').forEach(radio => {
         radio.addEventListener('change', (e) => {
@@ -223,4 +216,8 @@
             console.error('请求失败:', error);
         }
     });
-</script>
+    </script>
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

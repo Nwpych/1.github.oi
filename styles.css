@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+    --primary-color: #007aff;
+    --text-color: #111;
+    --background-color: #f7f8fa;
+    --card-bg: #fff;
+    --border-color: #e5e7eb;
+    --secondary-text: #555;
+    --tertiary-text: #888;
+}
+
+.dark-mode {
+    --primary-color: #0a84ff;
+    --text-color: #f1f3f5;
+    --background-color: #111;
+    --card-bg: #1a1a1a;
+    --border-color: #2a2a2a;
+    --secondary-text: #a0a0a0;
+    --tertiary-text: #777;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode header,
+.dark-mode main .bg-white,
+.dark-mode #auth-modal .bg-white {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.dark-mode .border {
+    border-color: var(--border-color);
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background-color: #222;
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+.dark-mode #log-container,
+.dark-mode #auth-section {
+    background-color: #222;
+}
+
+.dark-mode .text-\[\#555\] {
+    color: var(--secondary-text);
+}
+
+.dark-mode .text-\[\#888\] {
+    color: var(--tertiary-text);
+}
+
+.font-geist-mono {
+    font-family: 'SF Mono', SFMono-Regular, ui-monospace, Menlo, Monaco, monospace;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    outline: none;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+/* Status indicators */
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.status-success {
+    background-color: #34d399;
+}
+
+.status-error {
+    background-color: #f87171;
+}
+
+.status-warning {
+    background-color: #fbbf24;
+}
+
+.status-info {
+    background-color: #60a5fa;
+}
